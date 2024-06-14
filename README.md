@@ -1,80 +1,77 @@
+[<img src="https://img.shields.io/badge/Telegram-%40Me-orange">](https://t.me/Rahanesh)
 
 
 ![img1](.github/images/demo.png)
+راهنمای نصب و پیکربندی اولیه
 
-> 🇪🇳 README in english available [here](README-EN.md)
+## Functionality
+| Functional                                                     | Supported |
+|----------------------------------------------------------------|:---------:|
+| Multithreading                                                 |     ✅     |
+| Binding a proxy to a session                                   |     ✅     |
+| Auto-purchase of items if you have coins (tap, energy, charge) |     ✅     |
+| Random sleep time between clicks                               |     ✅     |
+| Random number of clicks per request                            |     ✅     |
+| Support tdata / pyrogram .session / telethon .session          |     ✅     |
 
-## Функционал  
-| Функционал                                                     | Поддерживается  |
-|----------------------------------------------------------------|:---------------:|
-| Многопоточность                                                |        ✅        |
-| Привязка прокси к сессии                                       |        ✅        |
-| Авто-покупка предметов при наличии монет (tap, energy, charge) |        ✅        |
-| Рандомное время сна между кликами                              |        ✅        |
-| Рандомное количество кликов за запрос                          |        ✅        |
-| Поддержка tdata / pyrogram .session / telethon .session        |        ✅        |
+## [Settings](https://github.com/rahanesh/HamsterKombatBot/blob/main/.env-example)
+| Variable                | Config                                                                                 |
+|--------------------------|------------------------------------------------------------------------------------------|
+| **API_ID / API_HASH**    | Platform data from which to launch a Telegram session _(stock - Android)_                |
+| **MIN_AVAILABLE_ENERGY** | Minimum amount of available energy, upon reaching which there will be a delay _(eg 100)_ |
+| **SLEEP_BY_MIN_ENERGY**  | Delay when reaching minimum energy in seconds _(eg [1800,2400])_                         |
+| **AUTO_UPGRADE**         | Whether to upgrade the passive earn _(True / False)_                                     |
+| **MAX_LEVEL**            | Maximum upgrade level _(eg 20)_                                                          |
+| **BALANCE_TO_SAVE**      | Balance limit that the bot “won't touch” _(eg 1000000)_                                  |
+| **UPGRADES_COUNT**       | The count of cards that the bot will upgrade in 1 lap _(eg 10)_                          |
+| **APPLY_DAILY_ENERGY**   | Whether to use the daily free energy boost _(True / False)_                              |
+| **APPLY_DAILY_TURBO**    | Whether to use the daily free turbo boost _(True / False)_                               |
+| **RANDOM_CLICKS_COUNT**  | Random number of taps _(eg [50,200])_                                                    |
+| **SLEEP_BETWEEN_TAP**    | Random delay between taps in seconds _(eg [10,25])_                                      |
+| **USE_PROXY_FROM_FILE**  | Whether to use proxy from the `bot/config/proxies.txt` file (True / False)               |
 
+## Quick Start 📚
+1. To install libraries on Windows click on `INSTALL.bat`.
+2. To start the bot use `START.bat` (or in console: `python main.py`).
 
-## [Настройки](https://github.com/shamhi/HamsterKombatBot/blob/main/.env-example)
-| Настройка                | Описание                                                                                      |
-|--------------------------|-----------------------------------------------------------------------------------------------|
-| **API_ID / API_HASH**    | Данные платформы, с которой запускать сессию Telegram _(сток - Android)_                      |
-| **MIN_AVAILABLE_ENERGY** | Минимальное количество доступной энергии, при достижении которой будет задержка _(напр. 100)_ |
-| **SLEEP_BY_MIN_ENERGY**  | Задержка при достижении минимальной энергии в секундах _(напр. [1800,2400])_                  |
-| **ADD_TAPS_ON_TURBO**    | Сколько тапов будет добавлено при активации турбо _(напр. 2500)_                              |
-| **AUTO_UPGRADE**         | Улучшать ли пассивный заработок _(True / False)_                                              |
-| **MAX_LEVEL**            | Максимальный уровень прокачки апгрейда _(напр. 20)_                                           |
-| **BALANCE_TO_SAVE**      | Лимит баланса, который бот "не тронет" _(напр. 1000000)_                                      |
-| **UPGRADES_COUNT**       | Количество карточек, который бот прокачает за 1 круг _(напр. 10)_                             |
-| **APPLY_DAILY_ENERGY**   | Использовать ли ежедневный бесплатный буст энергии _(True / False)_                           |
-| **APPLY_DAILY_TURBO**    | Использовать ли ежедневный бесплатный буст турбо _(True / False)_                             |
-| **RANDOM_CLICKS_COUNT**  | Рандомное количество тапов _(напр. [50,200])_                                                 |
-| **SLEEP_BETWEEN_TAP**    | Рандомная задержка между тапами в секундах _(напр. [10,25])_                                  |
-| **USE_PROXY_FROM_FILE**  | Использовать-ли прокси из файла `bot/config/proxies.txt` _(True / False)_                     |
+## Prerequisites
+Before you begin, ensure you have the following installed:
+- [Python](https://www.python.org/downloads/) version 3.10 or 3.11
 
-## Быстрый старт 📚
-1. Чтобы установить библиотеки в Windows, запустите INSTALL.bat.
-2. Для запуска бота используйте `START.bat` (или в консоли: `python main.py`).
+## Obtaining API Keys
+1. Go to [my.telegram.org](https://my.telegram.org) and log in using your phone number.
+2. Select **"API development tools"** and fill out the form to register a new application.
+3. Note down the `API_ID` and `API_HASH` in `.env` file provided after registering your application.
 
-## Предварительные условия
-Прежде чем начать, убедитесь, что у вас установлено следующее:
-- [Python](https://www.python.org/downloads/) версии 3.10 или 3.11.
-
-## Получение API ключей
-1. Перейдите на сайт [my.telegram.org](https://my.telegram.org) и войдите в систему, используя свой номер телефона.
-2. Выберите **"API development tools"** и заполните форму для регистрации нового приложения.
-3. Запишите `API_ID` и `API_HASH` в файле `.env`, предоставленные после регистрации вашего приложения.
-
-## Установка
-Вы можете скачать [**Репозиторий**](https://github.com/shamhi/HamsterKombatBot) клонированием на вашу систему и установкой необходимых зависимостей:
+## Installation
+You can download [**Repository**](https://github.com/rahanesh/HamsterKombatBot) by cloning it to your system and installing the necessary dependencies:
 ```shell
-~ >>> git clone https://github.com/shamhi/HamsterKombatBot.git 
+~ >>> git clone https://github.com/rahanesh/HamsterKombatBot.git
 ~ >>> cd HamsterKombatBot
 
-# Linux
+#Linux
 ~/HamsterKombatBot >>> python3 -m venv venv
 ~/HamsterKombatBot >>> source venv/bin/activate
 ~/HamsterKombatBot >>> pip3 install -r requirements.txt
-~/HamsterKombatBot >>> cp .env-example .env
-~/HamsterKombatBot >>> nano .env  # Здесь вы обязательно должны указать ваши API_ID и API_HASH , остальное берется по умолчанию
+~/HamsterKombatBot >>> nano .env # Here you must specify your API_ID and API_HASH , the rest is taken by default
 ~/HamsterKombatBot >>> python3 main.py
 
-# Windows
+#Windows
 ~/HamsterKombatBot >>> python -m venv venv
 ~/HamsterKombatBot >>> venv\Scripts\activate
 ~/HamsterKombatBot >>> pip install -r requirements.txt
-~/HamsterKombatBot >>> copy .env-example .env
-~/HamsterKombatBot >>> # Указываете ваши API_ID и API_HASH, остальное берется по умолчанию
+~/HamsterKombatBot >>> # Specify your API_ID and API_HASH, the rest is taken by default
 ~/HamsterKombatBot >>> python main.py
 ```
-> Установка в качестве Linux службы для фоновой работы бота [тут](docs/LINUX-SERVIS-INSTALL.md).
+> Installing as a Linux service for running the bot in the background [here](docs/LINUX-SERVIS-INSTALL_EN.md).
 
-Также для быстрого запуска вы можете использовать аргументы, например:
+Also for quick launch you can use arguments, for example:
 ```shell
 ~/HamsterKombatBot >>> python3 main.py --action (1/2)
-# Или
+# Or
 ~/HamsterKombatBot >>> python3 main.py -a (1/2)
 
-# 1 - Создает сессию
-# 2 - Запускает кликер
+#1 - Create session
+#2 - Run clicker
 ```
+## Install as service on Linux
